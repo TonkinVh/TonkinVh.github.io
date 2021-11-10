@@ -1,0 +1,82 @@
+/*
+rocketfromtheBX :)
+https://rockets.chat/
+*/
+
+$(document).ready(function() {
+
+	$(".linkAccount").on("click", function() {
+		$("#login-modal").fadeIn(200);
+	});
+
+	$("#cancelLink").on("click", function() {
+		$("#login-modal").fadeOut(200);
+	});
+
+	$("#confirmLogin").on("click", function() {
+		var username = $("#rblxUsername").val();
+		loginWithRoblox(username);
+	});
+
+	function loginWithRoblox(username) {
+		$("#confirmLogin").prop('disabled', true);
+		$("#cancelLink").prop('disabled', true);
+		if(!username) {
+			$("#confirmLogin").prop('disabled', false);
+			$("#cancelLink").prop('disabled', false);
+			return showLoginError("Please enter your Roblox username.");
+		}
+		$.ajax({
+			type: "POST",
+			url: '/api/loginUser',
+			data: {
+				username: username
+			},
+			dataType: 'json',
+			success: function(data) {
+				if(data['success']) {
+					if(data['new'] == 1) {
+						window.location.href = "/?new=1";
+					} else {
+						window.location.href = "/";
+					}
+				} else {
+					$("#confirmLogin").prop('disabled', false);
+					$("#cancelLink").prop('disabled', false);
+					return showLoginError("There was an issue logging you in. Please try again.");
+				}
+			}
+		});
+	}
+
+	function showLoginError(message) {
+		$("#login-modal").hide();
+		Swal.fire({
+			title: 'Whoops!',
+			text: message,
+			icon: 'error',
+			showCancelButton: false,
+			confirmButtonText: 'Ok',
+			focusConfirm: false,
+			allowOutsideClick: false
+		}).then(function() {
+			$("#login-modal").fadeIn(200);
+		});
+	}
+
+	$('#rblxUsername').keypress(function (e) {
+		if(e.which == 13) {
+			var username = $("#rblxUsername").val();
+			loginWithRoblox(username);
+			return false;
+		}
+	});
+
+	var url_string = window.location.href;
+	var url = new URL(url_string);
+	var sl = url.searchParams.get("shl");
+	if(sl) {
+		$(".linkAccount").trigger("click");
+	}
+
+});

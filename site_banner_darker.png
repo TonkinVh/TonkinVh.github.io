@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title>BloxBux - Earn Your Robux Today!</title>
+
+<meta name="description" content="Visit BloxBux and earn your free robux now! Earn robux from completing simple tasks and joining our frequent giveaways! What're you waiting for?">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#17b823">
+<meta name="author" content="BloxBux">
+<meta name="keywords" content="free robux,robux,roblox,free roblox">
+
+<meta property="og:site_name" content="BloxBux" />
+<meta property="og:url" content="https://bloxbux.gg/" />
+<meta property="og:image" content="https://bloxbux.gg/assets/images/meta-bg.png">
+<meta property="og:title" content="BloxBux - Earn Your Robux Today!" />
+<meta property="og:description" content="Visit BloxBux and earn your free robux now! Earn robux from completing simple tasks and joining our frequent giveaways! What're you waiting for?">
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bloxbux.gg/assets/images/meta-bg.png">
+<meta name="twitter:description" content="Visit BloxBux and earn your free robux now! Earn robux from completing simple tasks and joining our frequent giveaways! What're you waiting for?">
+
+<link rel="icon" type="image/png" href="https://bloxbux.gg/assets/images/fav.png">
+
+<link type="text/css" href="https://unpkg.com/emoji.css/dist/emoji.min.css" rel="stylesheet" />
+<link type="text/css" href="https://bloxbux.gg/assets/css/bulma.min.css" rel="stylesheet" />
+<link type="text/css" href="https://bloxbux.gg/assets/css/bulma-tooltip.min.css" rel="stylesheet" />
+<link type="text/css" href="https://bloxbux.gg/assets/css/bulma-divider.min.css" rel="stylesheet" />
+<link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" />
+
+<link type="text/css" href="https://bloxbux.gg/assets/css/main.css?v=1" rel="stylesheet" />
+
+	<style type="text/css">
+		.vhAlign {
+		    width:100%;    
+		    height:100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0px;
+		    justify-content: center;
+		    flex-direction: column;
+		    align-items: center;
+		    display: flex;
+		}
+		@media screen and (max-width: 1024px) {
+			.smsg {
+				font-size: 20px !important;
+			}
+			.sbtn {
+				font-size: 14px !important;
+			}
+		}
+		.title {
+			font-weight: 500;
+		}
+		.title:not(:last-child) {
+		    margin-bottom: 0.8rem;
+		}
+		.heff {
+			padding: 35px;
+		}
+		.heff:hover {
+			box-shadow: 0 0 35px -2px rgba(0,0,0,.2);
+		    -webkit-transition: box-shadow .3s;
+		    transition: box-shadow .3s;
+		}
+		.infoBox {
+			border-radius: 10px; 
+			padding: 20px;
+			color: #000;
+			font-size: 14px;
+			background-color: #f7f7f7;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="login-modal" class="login-modal">
+	<div id="login-content">
+		<div class="login-popup">
+			<div style="padding: 25px; background-color: #0868d0; border-radius: 10px 10px 0px 0px;">
+				<span style="font-size: 16px;">Login to BloxBux!</span>
+				<br />
+				<span style="font-size: 14px;">Please enter your <strong class="has-text-white">ROBLOX Username</strong> to start earning Robux!</span>
+			</div>
+			<div style="padding: 25px;">
+				<input type="text" class="input" id="rblxUsername" style="font-size: 15px;" />
+				<br /><br />
+				<center><small class="has-text-dark"><i class="fas fa-exclamation-circle" style="margin-right: 5px;"></i> We will <strong>NEVER</strong> ask for your password!</small></center>
+				<br />
+				<center>
+					<button class="button is-info" id="confirmLogin"><i class="fas fa-user-plus" style="margin-right: 10px;"></i> Enter</button> <button class="button is-danger" id="cancelLink">Cancel</button>
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="container">
+		<div class="navbar-brand">
+			<div class="navbar-item">
+				<a href="https://bloxbux.gg/" class="brand">
+					<div class="brand-icon enlarge">
+						<img src="https://bloxbux.gg/assets/images/logo.png?1" style="height: 50px;" />
+					</div>
+				</a>
+			</div>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div id="navbarBasicExample" class="navbar-menu">
+						<div class="navbar-end">
+				<div class="navbar-item">
+										<div class="buttons">
+						<a class="button is-info linkAccount">
+							<strong>Earn Robux Now!</strong>
+						</a>
+					</div>
+									</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="notification has-text-white has-text-weight-bold has-text-centered is-radiusless is-marginless" style="padding: 10px; background-color: #010f1dd4;">
+	<a href='https://bloxbux.gg/withdraw'> Make sure to redeem robux here! </a></div>
+
+	<figure class="image is-fullwidth" style="position: relative;">
+		<div class="vhAlign">
+			<span class="title is-1 has-text-white smsg">Earn <span style="color: #38f946 !important;">R$</span> By... <span id="earnMethod"></span></span>
+			<br />
+			<p>
+				<button class="button is-success is-large sbtn linkAccount" style="font-size: 1.8rem;">
+					<strong><span class="fas fa-user-plus mr-2"></span> START EARNING NOW</strong>
+				</button>
+			</p>
+		</div>
+		<img src="https://bloxbux.gg/assets/images/site_banner_darker.png" style="height: 380px; object-fit: cover; background-color: #021523;" /> 
+	</figure>
+
+	<section class="section">
+		<div class="container has-text-centered">
+			<div class="columns is-centered">
+				<div class="column is-10">
+					<div class="columns">
+						<div class="column heff">
+							<img src="https://bloxbux.gg/assets/images/3039396.svg" style="height: 100px;" />
+							<br /><br />
+							<h4 class="title is-4 is-spaced">Sign Up</h4>
+							<h5 class="subtitle is-5" style="font-size: 16px; line-height: 1.5;">Click on "Start Earning Now" and enter your ROBLOX username to begin! <strong>YOU DO NOT NEED TO ENTER YOUR ROBLOX PASSWORD!</strong></h5>
+						</div>
+						<div class="column heff">
+							<img src="https://bloxbux.gg/assets/images/1728885.svg" style="height: 100px;" />
+							<br /><br />
+							<h4 class="title is-4 is-spaced">Earn Rewards</h4>
+							<h5 class="subtitle is-5" style="font-size: 16px; line-height: 1.5;">Earn points by downloading mobile apps, complete surveys and watching videos!</h5>
+						</div>
+						<div class="column heff">
+							<img src="https://bloxbux.gg/assets/images/1086745.svg" style="height: 100px;" />
+							<br /><br />
+							<h4 class="title is-4 is-spaced">Withdraw Robux</h4>
+							<h5 class="subtitle is-5" style="font-size: 16px; line-height: 1.5;">Exchange your hard-earned points for ROBUX in ROBLOX. It's as easy as clicking a button and joining a group!</h5>
+						</div>
+					</div>
+					<br />
+					<div class="columns">
+						<div class="column">
+							<div class="has-background-white" style="border-radius: 25px; box-shadow: 0 0 35px -2px rgba(0,0,0,.2); height: 100%; position: relative;">
+								<div style="padding: 30px;">
+									<h4 class="title is-4 has-text-centered is-spaced">Recent Awards</h4>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=2007864343&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												bloxy_12345678 was Awarded 4 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=764121493&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												joshangelo21 was Awarded 0.7 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=2568823425&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												ScottyLeaf was Awarded 0.7 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=432050365&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												arthuroficialbr1 was Awarded 8 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=1742590501&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												mrpooprky was Awarded 1.05 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=753755925&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												plich10 was Awarded 8 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=1746730342&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												revlll was Awarded 8 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=1706791052&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												agrayelu was Awarded 1.88 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																		<div class="columns is-vcentered">
+										<div class="column is-3">
+											<div>
+												<center>
+													<figure class="image is-96x96">
+														<img class="is-rounded" src="https://www.roblox.com/headshot-thumbnail/image?userId=360820993&width=420&height=420&format=png" style="padding: .40rem;background-color: #fff;border: 2px solid #dee2e6;">
+													</figure>
+												</center>
+											</div>
+										</div>
+										<div class="column">
+											<div class="has-text-white" style="border-radius: 10px; padding: 7px; background-color: #0099FF; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+												DanielxdSBlol was Awarded 2 <img src="https://bloxbux.gg/assets/images/robuxicon2.png" style="height: 20px; vertical-align: middle;" />
+											</div>
+										</div>
+									</div>
+																	</div>
+								<div class="has-text-white" style="border-radius: 25px; font-size: 19px; background-color: #348fd9; position: absolute; bottom: 0; width: 100%;">
+									<div style="padding: 30px; padding-bottom: 20px;">
+										<h5 class="title is-5 has-text-left has-text-white">Registered Users: 18,345</h5> 
+									</div>
+									<div class="has-text-white" style="border-radius: 25px; padding: 30px; font-size: 19px; background-color: #2fbf39;">
+										<h5 class="title is-5 has-text-left has-text-white">Total Awarded: 81,030</h5> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="has-background-white" style="border-radius: 25px; box-shadow: 0 0 35px -2px rgba(0,0,0,.2);">
+								<div style="padding: 30px;">
+									<h4 class="title is-4 has-text-centered is-spaced">About Us</h4> 
+									<div class="infoBox">
+										What is BloxBux? BloxBux is a new website focused on awarding hard-working users free Robux by completing rewards! We pay out higher rates than all of our competitors because we're all about centering this around YOU and making sure you get the best experience possible! BloxBux is completely safe and free to use.
+									</div>
+									<br />
+									<h4 class="title is-4 has-text-centered is-spaced">How Does It Work?</h4> 
+									<div class="infoBox">
+										We do not ask for or need any personal information. You complete offers on the website and earn Robux, which you can instantly withdraw into your account! Every offer you complete, our partners pay us, which allows us to invest a portion of that back into purchasing Robux for the website to pay you out! This makes it a nice win-win situation for both you and us!
+									</div>
+									<br />
+									<h4 class="title is-4 has-text-centered is-spaced">Where's My Robux?</h4> 
+									<div class="infoBox">
+										If you’re missing robux from completed offers refer to our FAQ page for assistance.
+									</div>
+								</div>
+								<a href="https://discord.gg/Y3zUpwp6qr" target="_blank">
+									<div class="has-text-white" style="border-radius: 25px; padding: 30px; font-size: 19px; background-color: #7289da;">
+										<span class="fab fa-discord mr-2"></span> Join Our Discord Server for further support!
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer footer-dark">
+	<div class="container">
+		<span style="font-size: 12px; font-weight: 500; text-transform: uppercase;">
+			WELCOME TO BloxBux - EARN FREE ROBUX
+			<br />
+			BloxBux IS NOT, AND WILL NEVER CLAIM TO BE, AFFILIATED BY ROBLOX OR ANY OTHER WEBSITE UNLESS STATED.
+			<br />
+			COPYRIGHT &copy; BloxBux 2020
+			<br /><br />
+			<a class="has-text-white" href="https://bloxbux.gg/terms">Terms and Conditions</a> | <a class="has-text-white" href="https://bloxbux.gg/privacy">Privacy Policy</a> | <a class="has-text-white" href="https://bloxbux.gg/help">Help</a>
+		</span>
+	</div>
+</footer> 
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script type="text/javascript" src="https://bloxbux.gg/assets/js/bulma-extensions.min.js"></script>
+<script type="text/javascript" src="https://bloxbux.gg/assets/js/bulma-toast.min.js"></script>
+<script type="text/javascript" src="https://bloxbux.gg/assets/js/login.js?v=4"></script>
+<script type="text/javascript" src="https://bloxbux.gg/assets/js/main.js"></script>
+<script src="https://kit.fontawesome.com/11277b4f51.js"></script>
+	<script type="text/javascript" src="https://bloxbux.gg/assets/js/typeit.min.js"></script>
+	<script type="text/javascript">
+		new TypeIt("#earnMethod",{speed:100,deleteSpeed:25,loop:true,waitUntilVisible:true}).type("Watching TikToks",{delay:100}).pause(3500).delete(null).pause(1000).type("Inviting Friends",{delay:100}).pause(3500).delete(null,{delay:100}).pause(1000).type("Completing Quizzes",{delay:100}).pause(2500).delete(null,{delay:100}).pause(1000).type("Playing Games",{delay:100}).pause(3500).delete(null,{delay:100}).pause(1000).type("Downloading Apps",{delay:100}).pause(3500).delete(null,{delay:100}).pause(1000).go();
+	</script>
+
+</body>
+</html>
